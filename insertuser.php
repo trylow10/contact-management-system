@@ -14,5 +14,5 @@ if (!$res) {
     // header("location:login.php?msg=invalid");
 } else {
     echo '<script>alert(" new user created")</script>';
-    header("location:index.php");
+    header("location:profile.php");
 }

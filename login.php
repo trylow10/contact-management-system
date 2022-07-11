@@ -79,6 +79,7 @@ session_start();
                         <input type="submit" class="btn btn-primary" value="Login"><br>
                         <!-- <a href="">Forget Password?</a><br> -->
                         Don't have an account ? <a href="registration.php">Signup</a><br>
+                        <!-- Forget Password <a href="passwordchange.php">Click here</a><br> -->
                 </div>
                 </form>
 

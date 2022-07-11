@@ -53,7 +53,7 @@
             <div class="col-md-4 col-sm-4 col-xs-12">
                 <div class="loginbox">
                     <h1 class="h1">Registration Form</h1><br><br>
-                    <form name="frm" action="insertuser.php" onsubmit=" return valid()" method="POST">
+                    <form name="frm" action="insertuser.php" method="POST">
                         <div class="fontuser">
                             <label for="Username">Username</label>
                             <input type="text" class="form-control" name="username" placeholder="Username">
@@ -78,13 +78,14 @@
                             <label for="Password">Confirm Password</label>
                             <input type="Password" class="form-control" name="password2" placeholder="Password">
                         </div></br>
-                        <input type="submit" class="btn btn-primary" value="Sign Up"><br><br>
+                        <input type="submit" id="registerSubmit" class="btn btn-primary" value="Sign Up"><br><br>
                 </div>
                 Already have an account<a href="login.php"> Login
                     </form>
 </body>
 <script type="text/javascript">
-    function valid() {
+    const registerSubmit = document.getElementById("registerSubmit");
+    registerSubmit.addEventListener("click", (e) => {
 
         var un = document.forms['frm']['username'].value;
         var em = document.forms['frm']['email'].value;
@@ -97,24 +98,33 @@
         var pass2 = document.forms['frm']['password2'].value;
 
         if (un == "" || em == "" || cont == "" || pass == "" || pass1 == "" || add == "") {
+            e.preventDefault();
             alert("All fields are required");
         } else if (!un.match(/^[A-Z a-z]+$/)) {
+            e.preventDefault();
             alert("Name only consists character");
         } else if (atpos < 1 && dtpos < 2) {
+            e.preventDefault();
             alert("Invalid email");
         } else if (!cont.match(/^\d{10}$/)) {
+            e.preventDefault();
             alert("Contact must be 10 digit");
         } else if (un == pass) {
+            e.preventDefault();
             alert("Username and Password must be different");
         } else if (pass1 < 8) {
+            e.preventDefault();
             alert("Password must be greater than 8 digit");
         } else if (pass2 != pass) {
+            e.preventDefault();
             alert("Two Password must be same.");
         } else {
+
             alert("New User is created");
 
         }
-    }
+
+    })
 </script>
 
 </html>

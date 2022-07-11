@@ -14,10 +14,10 @@ if ($row[0] > 0) {
         header("location: dashboard.php");
     } else {
         //redirect to user home page
-        header("location:   index.php");
+        header("location: profile.php");
     }
 } else {
-    header("location:login.php");
+    header("location:login.php?msg=invalid");
 }
 ?>
 
