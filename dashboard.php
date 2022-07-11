@@ -6,10 +6,13 @@ session_start();
 <head>
 
 </head>
+<h1>Admin Model</h1>
 
 <body>
     <?php
     if (isset($_SESSION['username'])) {
+
+        echo '<a href="addcontact.php">Add Contact</a><br><br>';
         echo '
     <div class="tb">
         <table border="1" width="100%">
@@ -64,8 +67,8 @@ session_start();
 
 
 
-
-    <!-- <div class="log"><a href="dashboard.php">Go Home</a></div> -->
+    <br><br>
+    <div class="log"><a href="logout.php">Logout</a></div>
 </body>
 
 </html>

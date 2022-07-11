@@ -67,6 +67,7 @@ session_start();
                     }
                     ?>
                     <form action="switchuser.php" method="POST">
+                        <input type="hidden" name="id">
                         <div class="fontuser">
                             <label for="Username">Username</label>
                             <input type="text" class="form-control" name="username" placeholder="Username" required>

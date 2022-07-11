@@ -16,16 +16,12 @@ session_start();
 
 
     <?php
-    // echo " Welcome " .$_SESSION['username'];
     if (isset($_SESSION['username'])) {
 
-        // echo "welcome " . $_SESSION['username'] . "<br><br>";
-        // include("userinfo.php");
 
-
-        // include "search.php";
         echo '<a href="addcontact.php">Add Contact</a><br><br>';
-        // <span>@gmail.com</span><br>
+        echo '<a href="passwordchange.php">Change Password</a><br><br>';
+
 
         echo '   <form method="post" action="search.php">
 <input autocomplete="off" type="text" name="email" name="name" required="" />
@@ -36,7 +32,7 @@ session_start();
         echo '<br><br><a href="logout.php">Logout</a>';
     } else {
 
-        echo "you are not logged in";
+        echo 'you are not logged in<br><br><a href="login.php">click here</a>';
     }
     ?>
 

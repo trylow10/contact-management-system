@@ -14,7 +14,7 @@ if ($row[0] > 0) {
         header("location: dashboard.php");
     } else {
         //redirect to user home page
-        header("location: profile.php");
+        header("location: index.php");
     }
 } else {
     header("location:login.php?msg=invalid");

@@ -33,7 +33,7 @@
                         echo "<td> " . $row['address'] .  "</td>";
                         echo "<td> " . $row['contact'] . "</td>";
 
-                        // echo "<td> <a href = \"edituser.php?id=" . $row['id'] . "\"> Edit </a> </td>";
+                        echo "<td> <a href = \"edituser.php?id=" . $row['id'] . "\"> Edit </a> </td>";
                         // echo "<td><a href = \"deleteuser.php?id=" . $row['id'] . "\"> Delete </a> </td>";
                         echo "</tr>";
                     }
